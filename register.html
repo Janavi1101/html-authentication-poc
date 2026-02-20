@@ -5,33 +5,51 @@
 </head>
 <body>
 
-<h2>Registration</h2>
+<h1 align="center">Create Your Account</h1>
+<p align="center">Fill in the details below to register. If you already have an account, use the login button.</p>
 
-<form action="index.html">
-    <label>Name:</label><br>
-    <input type="text" required><br><br>
+<h2 align="center">Registration Form</h2>
 
-    <label>Email ID:</label><br>
-    <input type="email" required><br><br>
-
-    <label>Phone Number:</label><br>
-    <input type="tel" required><br><br>
-
-    <label>Password:</label><br>
-    <input type="password" required><br><br>
-
-    <label>Confirm Password:</label><br>
-    <input type="password" required><br><br>
-
-    <button type="submit">Register</button>
-</form>
+<table border="1" align="center" cellpadding="10">
+    <form action="index.html">
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" required></td>
+        </tr>
+        <tr>
+            <td>Email ID:</td>
+            <td><input type="email" required></td>
+        </tr>
+        <tr>
+            <td>Phone Number:</td>
+            <td><input type="tel" required></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" required></td>
+        </tr>
+        <tr>
+            <td>Confirm Password:</td>
+            <td><input type="password" required></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button type="submit">Register</button>
+            </td>
+        </tr>
+    </form>
+</table>
 
 <br>
 
-<p>Already have an account?</p>
-<form action="index.html">
-    <button type="submit">Login</button>
-</form>
-
+<table align="center">
+    <tr>
+        <td>
+            <form action="index.html">
+                <button type="submit">Login</button>
+            </form>
+        </td>
+    </tr>
+</table>
 </body>
 </html>
