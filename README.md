@@ -20,7 +20,7 @@ The project demonstrates basic front-end structure and navigation between pages 
 
 ##  Features
 
-### 1️ Login Page
+### 1️ Login Page(index.html)
 - Username field
 - Password field
 - Login button (Redirects to Dashboard)
