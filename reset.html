@@ -5,17 +5,28 @@
 </head>
 <body>
 
-<h2>Reset Password</h2>
+<h1 align="center">Reset Your Password</h1>
+<p align="center">Enter a new password below and confirm it to update your password.</p>
 
-<form action="index.html">
-    <label>New Password:</label><br>
-    <input type="password" required><br><br>
+<table border="1" align="center" cellpadding="10">
+    <form action="index.html">
+        <tr>
+            <td>New Password:</td>
+            <td><input type="password" required></td>
+        </tr>
+        <tr>
+            <td>Confirm Password:</td>
+            <td><input type="password" required></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button type="submit">Update Password</button>
+            </td>
+        </tr>
+    </form>
+</table>
 
-    <label>Confirm Password:</label><br>
-    <input type="password" required><br><br>
-
-    <button type="submit">Update Password</button>
-</form>
+<p align="center">After updating, you will be redirected to the login page.</p>
 
 </body>
 </html>
