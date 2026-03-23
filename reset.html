@@ -52,6 +52,25 @@ function resetPass(e) {
         window.location.href = "index.html";
     }, 1000);
 }
+function validateForm(e) {
+        e.preventDefault();
+
+        let pass = document.getElementById("newPass").value;
+        let confirm = document.getElementById("confirmPass").value;
+
+        if (pass !== confirm) {
+            alert("Passwords do not match!");
+            return;
+        }
+
+        let btn = e.target.querySelector("button");
+        let spinner = btn.querySelector(".spinner-border");
+        spinner.classList.remove("d-none");
+
+        setTimeout(() => {
+            window.location.href = "index.html";
+        }, 1000);
+ }
 
 </script>
 
