@@ -51,11 +51,24 @@ The project demonstrates basic front-end structure and navigation between pages 
 
 ---
 
-##  Technologies Used
+## 🛠️ Tech Stack
 - HTML5
+- CSS3
+- Bootstrap 5
+- JavaScript
 
 ---
 
+
+## 📸 Screenshots
+- Login  
+- Register  
+- Forgot Password  
+- Reset Password  
+- Dashboard  
+
+
+---
 
 ##  Learning Outcome
 - Understanding of HTML forms
