@@ -1,0 +1,113 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Body */
+html, body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Light Mode Background */
+body {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Labels */
+.form-label {
+    font-weight: 500;
+}
+
+/* Buttons */
+.btn-custom {
+    background: #4facfe;
+    color: white;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.btn-custom:hover {
+    background: #007bff;
+    transform: scale(1.05);
+}
+
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+
+/* Links */
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #007bff;
+}
+
+
+
+/* Password Strength Bar */
+.strength-bar {
+    height: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+}
+
+.weak {
+    width: 33%;
+    background: red;
+}
+
+.medium {
+    width: 66%;
+    background: orange;
+}
+
+.strong {
+    width: 100%;
+    background: green;
+}
+
+/* Spinner spacing */
+.spinner-border {
+    margin-left: 8px;
+}
+
+/* Smooth Animations */
+body {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Centering helper */
+.min-vh-100 {
+    min-height: 100vh;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .card {
+        width: 90% !important;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 95% !important;
+    }
+}

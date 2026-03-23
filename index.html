@@ -1,48 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login Page</title>
+    <title>Login</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
 
-<h1 align="center">Welcome to Website</h1>
-<p align="center">Please login with your credentials to access the dashboard. If you are a new user, please register first.</p>
+<body class="d-flex align-items-center justify-content-center min-vh-100">
 
-<h2 align="center">Login</h2>
+    <div class="card p-4" style="width:350px;">
+    <h3 class="text-center">Login</h3>
 
-<table border="1" align="center" cellpadding="10">
-    <form action="dashboard.html">
-        <tr>
-            <td>Username:</td>
-            <td><input type="text" required></td>
-        </tr>
-        <tr>
-            <td>Password:</td>
-            <td><input type="password" required></td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center">
-                <button type="submit">Login</button>
-            </td>
-        </tr>
+    <form onsubmit="handleLogin(event)">
+    
+        <div class="mb-3">
+            <label class="form-label">Username</label>
+            <input class="form-control" required>
+        </div>
+
+        
+        <label class="form-label">Password</label>
+        <div class="mb-2 position-relative">
+            <input type="password" id="password" class="form-control" onkeyup="checkStrength()" required>
+            <i class="bi bi-eye position-absolute top-50 end-0 translate-middle-y me-3"
+            onclick="togglePassword('password', this)"></i>
+        </div>
+        
+
+        <button class="btn btn-custom w-100">
+            Login <span class="spinner-border spinner-border-sm d-none"></span>
+        </button>
     </form>
-</table>
 
-<br>
+    <div class="text-center mt-3">
+        <a href="forgot.html">Forgot Password?</a><br>
+        <a href="register.html">Register</a>
+    </div>
+    </div>
 
-<table align="center" cellpadding="10">
-    <tr>
-        <td>
-            <form action="forgot.html">
-                <button type="submit">Forgot Password</button>
-            </form>
-        </td>
-        <td>
-            <form action="register.html">
-                <button type="submit">Register</button>
-            </form>
-        </td>
-    </tr>
-</table>
+<script>
+
+// Spinner + redirect
+function handleLogin(e) {
+    e.preventDefault();
+    let btn = e.target.querySelector("button");
+    let spinner = btn.querySelector(".spinner-border");
+
+    spinner.classList.remove("d-none");
+
+    setTimeout(() => {
+        window.location.href = "dashboard.html";
+    }, 1000);
+}
+function togglePassword(id, icon) {
+        let input = document.getElementById(id);
+        input.type = input.type === "password" ? "text" : "password";
+        icon.classList.toggle("bi-eye");
+        icon.classList.toggle("bi-eye-slash");
+    }
+
+// Page fade
+document.body.style.opacity = 0;
+window.onload = () => document.body.style.opacity = 1;
+</script>
+
 </body>
 </html>

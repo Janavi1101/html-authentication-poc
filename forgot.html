@@ -2,36 +2,41 @@
 <html>
 <head>
     <title>Forgot Password</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
 
-<h1 align="center">Forgot Your Password?</h1>
-<p align="center">Enter your registered email ID below to receive a password reset link.</p>
+<body class="d-flex align-items-center justify-content-center min-vh-100">
 
-<table border="1" align="center" cellpadding="10">
-    <form action="reset.html">
-        <tr>
-            <td>Email:</td>
-            <td><input type="email" required></td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center">
-                <button type="submit">Send Reset Link</button>
-            </td>
-        </tr>
+    <div class="card p-4" style="width:350px;">
+    <h4 class="text-center">Forgot Password</h4>
+
+    <form onsubmit="handleSubmit(event)">
+    
+        <label class="form-label">Email Address</label>
+        <input type="email" class="form-control mb-3" required>
+
+        <button class="btn btn-custom w-100">
+            Send Link <span class="spinner-border spinner-border-sm d-none"></span>
+        </button>
     </form>
-</table>
 
-<br>
+    </div>
 
-<table align="center">
-    <tr>
-        <td>
-            <form action="index.html">
-                <button type="submit">Back to Login</button>
-            </form>
-        </td>
-    </tr>
-</table>
+<script>
+function handleSubmit(e) {
+    e.preventDefault();
+    let spinner = e.target.querySelector(".spinner-border");
+    spinner.classList.remove("d-none");
+
+    setTimeout(() => {
+        window.location.href = "reset.html";
+    }, 1000);
+}
+
+
+</script>
+
 </body>
 </html>
