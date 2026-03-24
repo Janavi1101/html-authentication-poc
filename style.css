@@ -98,16 +98,36 @@ body {
     min-height: 100vh;
 }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
+
+/* Mobile (320px - 767px) */
+@media (max-width: 767px) {
     .card {
-        width: 90% !important;
+        width: 95% !important;
         padding: 15px;
+    }
+
+    h3 {
+        font-size: 1.5rem;
     }
 }
 
-@media (max-width: 480px) {
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
     .card {
-        width: 95% !important;
+        max-width: 450px;
+    }
+}
+
+/* Laptop (1366px - 1920px) */
+@media (min-width: 1366px) {
+    .card {
+        max-width: 400px;
+    }
+}
+
+/* Desktop (1920px and above) */
+@media (min-width: 1920px) {
+    .card {
+        max-width: 420px;
     }
 }
